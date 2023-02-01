@@ -1,12 +1,10 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
 	import * as PIXI from 'pixi.js';
-
 	let elemCanvas: HTMLCanvasElement;
 	let app: PIXI.Application;
 	onMount(() => {
 		PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
-
 		app = new PIXI.Application({
 			view: elemCanvas,
 			resizeTo: document.body,
@@ -25,7 +23,7 @@
 			elapsed += delta;
 			// Update the sprite's X position based on the cosine of our elapsed time.  We divide
 			// by 50 to slow the animation down a bit...
-			sprite.x = 100.0 + Math.cos(elapsed / 50.0) * 100.0;
+			sprite.x = 100.0 + Math.cos(elapsed / 10.0) * 100.0;
 		});
 	});
 	onDestroy(() => {

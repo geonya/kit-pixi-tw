@@ -3,9 +3,4 @@
 </script>
 
 <Canvas />
-
-<style lang="postcss">
-	:global(html) {
-		background-color: theme(colors.gray.500);
-	}
-</style>
+<div class="text-blue-500">Geony</div>
